@@ -1,0 +1,155 @@
+.section1{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bg-1.jpg) no-repeat center;
+    background-size: 100%;
+    position: relative;
+}
+
+
+.cold-heath-1 img{
+    position: relative;
+    background-size: contain;
+    height: 400px;
+    border-radius: 20px;
+    width: 50%;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: revealReverse 1s ease-in-out forwards;
+    animation-delay: .5s;
+}
+.cold-heath-1 img:before{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
+    animation: reveal 1s ease-in-out forwards;
+    animation-delay: .5s;
+}
+@keyframes reveal {
+    0%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0);
+    }
+}
+@keyframes revealReverse {
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.cold-heath-1{
+    width: 90%;
+    height: 400px;
+    display: flex;
+    position: absolute;
+    top: 15%;
+    background: rgba(176, 175, 175, 0.8);
+    left: 5%;
+    right: 5%;
+    border-radius: 30px;
+    
+}
+div.contents{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    align-items: baseline;
+    max-height: 400px;
+}
+.content-2 h1{
+    font-size: 58px;
+    font-weight: 900;
+    animation-delay: .5s;
+}
+.content-2 p{
+    font-size: 28px;
+    color: #5c5c5c;
+    animation-delay: .75s;
+}
+.content-2 h1,
+.content-2 p{
+    position: relative;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: revealTextReverse 1s ease-in-out forwards;
+}
+.content-2 h1:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
+    animation: revealText 1s ease-in-out forwards; 
+    animation-delay: .5s;
+}
+
+.content-1 p:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
+    animation: revealText 1s ease-in-out forwards;
+    animation-delay: .75s;
+}
+@keyframes revealText{
+    0%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0)
+    }
+}
+@keyframes revealTextReverse{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1)
+    }
+}
+.cold-heath-1 button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #046bb8;
+    color: #fff;
+    padding: 18px 60px;
+    font-size: 22px;
+    border-radius: 20px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transform-origin: right;
+    transform: scaleX(0);
+    animation: revealTextReverse 1.5s ease-in-out forwards; 
+    animation-delay: 1.5s;
+}
+.cold-heath-1 button:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    animation: revealText 1.5s ease-in-out forwards; 
+    animation-delay: 1.5s;
+}
